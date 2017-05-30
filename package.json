@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "lite-server -c=bs-config.json",
-    "start": "concurrently \"webpack -w\" \"npm run serve\""
+	"start:watch": "concurrently \"webpack -w\" \"npm run serve\"",
+    "start": "npm run serve"
   },
   "keywords": [],
   "author": "",
