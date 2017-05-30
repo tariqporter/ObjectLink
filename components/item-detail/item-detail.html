@@ -1,0 +1,95 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <cc-header class="cc-header"></cc-header>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2">
+            <a class="" href="/">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <span>Back to results</span>
+            </a>
+        </div>
+        <div class="col-xs-7">
+            <div class="search--header">
+                <i class="fa fa-search v-center" style="position:absolute;" aria-hidden="true"></i>
+                <input class="input" placeholder="{{'Object Keyword Search'}}" ng-model="$ctrl.um.searchInput" />
+                <button type="button" ng-click="$ctrl.clear()" class="clear pull-right btn--none">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <ul class="list-inline checkbox--group">
+                <li>
+                    <label class="checkbox--label">
+                        <input type="checkbox" checked />
+                        <span class="checkbox">CAMS</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox--label">
+                        <input type="checkbox" checked />
+                        <span class="checkbox">COS</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox--label">
+                        <input type="checkbox" checked />
+                        <span class="checkbox">JDE</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="col-xs-8">
+                <div class="col-xs-12">
+                    <h3 ng-bind="$ctrl.item.Title1"></h3>
+                    <h4 ng-bind="$ctrl.item.Title2"></h4>
+                </div>
+                <div class="col-xs-6">
+                    <h5 ng-bind="$ctrl.item.Medium"></h5>
+
+                    <h6>Size</h6>
+                    <button type="button">cm</button>
+                    <button type="button">ins</button>
+                    <p ng-bind="$ctrl.item.Dimensions"></p>
+
+                    <h6>Details / description</h6>
+                    <p ng-bind="$ctrl.item.Details"></p>
+
+                    <h6>Category</h6>
+                    <p ng-bind="$ctrl.item.Category"></p>
+
+                    <h6>Department</h6>
+                    <p ng-bind="$ctrl.item.Department"></p>
+                </div>
+                <div class="col-xs-6">
+                    <h6>Catalogue raisonne key</h6>
+                    <p ng-bind="$ctrl.item.Raisonne"></p>
+
+                    <h6>Edition</h6>
+                    <p ng-bind="$ctrl.item.Edition"></p>
+
+                    <h6>Parts</h6>
+                    <p ng-bind="$ctrl.item.Parts"></p>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="image--container">
+                    <img ng-src="{{$ctrl.item.ImageUrl}}"/>
+                    <button type="button" ng-click="$ctrl.openZoomImage($ctrl.item.ImageUrl)" class="btn btn-primary btn--primary btn--expand">
+                        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

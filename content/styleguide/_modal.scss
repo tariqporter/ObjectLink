@@ -1,0 +1,14 @@
+﻿.modal-fs {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+
+    .modal-content,
+    .modal-body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        padding: 0; 
+    }
+}

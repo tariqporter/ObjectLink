@@ -1,0 +1,35 @@
+﻿<div>
+    <div class="page-header page--header">
+        <a href="/" class=""><h3>Object Link</h3></a>
+    </div>
+
+    <div class="navbar-collapse collapse" uib-collapse="$ctrl.um.nc" aria-expanded="false" aria-hidden="true">
+        <ul class="nav navbar-nav navbar-left">
+            <li ng-repeat="menu in $ctrl.leftMenus" class="btn-group btn-dropdown btn--dropdown text-center">
+                <button type="button" class="">
+                    <span ng-bind="menu.title"></span>
+                    <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu dropdown--menu" uib-dropdown-menu role="menu">
+                    <li ng-repeat="subMenu in menu.subMenus" class="">
+                        <button type="button" ng-bind="subMenu.title" class="sub--dropdown"></button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="menu in $ctrl.rightMenus" class="btn-group btn-dropdown large btn--dropdown text-center">
+                <button type="button" class="">
+                    <span ng-bind="menu.title"></span>
+                    <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu dropdown--menu" uib-dropdown-menu role="menu">
+                    <li ng-repeat="subMenu in menu.subMenus" class="">
+                        <button type="button" ng-bind="subMenu.title" ng-click="subMenu.action(subMenu)" class="sub--dropdown"></button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿html { 
+  overflow-y: scroll; 
+}
+
+.top-buffer {
+    margin-top:15px;
+}
+
+.v-center {
+    top:50%;
+    transform:translateY(-50%);
+}
