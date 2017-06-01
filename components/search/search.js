@@ -23,8 +23,4 @@ function SearchController() {
         cosSelected: true,
         jdeSelected: true
     };
-
-    self.toggleRefineShow = function () {
-        self.um.refineShow = !self.um.refineShow;
-    };
 }

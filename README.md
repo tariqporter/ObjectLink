@@ -16,7 +16,7 @@ Install npm dependencies
 npm install
 ```
 
-and then run `webpack-dev-server` to compile and server application
+and then run `webpack-dev-server` to compile and serve the application
 
 ```bash
 npm run webpack-dev-server
@@ -24,4 +24,4 @@ npm run webpack-dev-server
 
 This will run webpack with the watch option so modules will be recompiled on change
 
-You can then browse to `http://localhost:80800` to view the application
+You can then browse to `http://localhost:8080` to view the application
