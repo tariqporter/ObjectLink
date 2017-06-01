@@ -19,8 +19,8 @@ function SearchFooterDirective() {
 
 function SearchFooterController($location) {
     var self = this;
-
+	
     self.search = function() {
-        $location.path('results').search('query', encodeURIComponent(JSON.stringify(self.um)));
+        $location.path('results').search('query',  Object.keys(self.um).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.um[k])}`).join('&'));
     };
 }
