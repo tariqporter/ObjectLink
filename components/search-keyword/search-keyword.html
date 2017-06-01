@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="search--keyword">
+        <button type="button" class="pull-left btn--none">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+		<input class="input" placeholder="{{'Object Keyword Search'}}" ng-model="$ctrl.um.keywordInput" />
+		<button type="button" ng-click="$ctrl.clear()" class="right pull-right btn--none">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</div>
+</div>
+<div class="row">
+	<div class="search--systems">
+		<ul class="selections list-inline checkbox--group">
+			<li>
+				<label class="checkbox--label">
+					<input type="checkbox" ng-model="$ctrl.um.camsSelected" />
+					<span class="checkbox">CAMS</span>
+				</label>
+			</li>
+			<li>
+				<label class="checkbox--label">
+					<input type="checkbox" ng-model="$ctrl.um.cosSelected" />
+					<span class="checkbox">COS</span>
+				</label>
+			</li>
+			<li>
+				<label class="checkbox--label">
+					<input type="checkbox" ng-model="$ctrl.um.jdeSelected" />
+					<span class="checkbox">JDE</span>
+				</label>
+			</li>
+		</ul>
+	</div>
+</div>

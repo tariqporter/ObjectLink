@@ -2,16 +2,16 @@
     font-family: "Baskerville10Pro";
     font-weight: normal;
     font-style: normal;
-    src: url("/Content/fonts/Baskerville10/Baskerville10Pro.eot");
-    src: url("/Content/fonts/Baskerville10/Baskerville10Pro.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/Baskerville10/Baskerville10Pro.woff2") format("woff2"), url("/Content/fonts/Baskerville10/Baskerville10Pro.woff") format("woff"), url("/Content/fonts/Baskerville10/Baskerville10Pro.ttf") format("truetype");
+    src: url("#{$cc-font-path}/Baskerville10/Baskerville10Pro.eot");
+    src: url("#{$cc-font-path}/Baskerville10/Baskerville10Pro.eot?#iefix") format("embedded-opentype"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro.woff2") format("woff2"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro.woff") format("woff"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro.ttf") format("truetype");
 }
 /* Baskerville 10 Pro Italic */
 @font-face {
     font-family: "Baskerville10Pro";
     font-weight: normal;
     font-style: italic;
-    src: url("/Content/fonts/Baskerville10/Baskerville10Pro-Italic.eot");
-    src: url("/Content/fonts/Baskerville10/Baskerville10Pro-Italic.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/Baskerville10/Baskerville10Pro-Italic.woff2") format("woff2"), url("/Content/fonts/Baskerville10/Baskerville10Pro-Italic.woff") format("woff"), url("/Content/fonts/Baskerville10/Baskerville10Pro-Italic.ttf") format("truetype");
+    src: url("#{$cc-font-path}/Baskerville10/Baskerville10Pro-Italic.eot");
+    src: url("#{$cc-font-path}/Baskerville10/Baskerville10Pro-Italic.eot?#iefix") format("embedded-opentype"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro-Italic.woff2") format("woff2"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro-Italic.woff") format("woff"), url("#{$cc-font-path}/Baskerville10/Baskerville10Pro-Italic.ttf") format("truetype");
 }
 
 /* Atlas Grotesk Web regular */
@@ -19,22 +19,22 @@
     font-family: "Atlas Grotesk Web";
     font-weight: 400;
     font-style: normal;
-    src: url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.eot");
-    src: url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.woff") format("woff"), url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.ttf") format("truetype");
+    src: url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.eot");
+    src: url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.eot?#iefix") format("embedded-opentype"), url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.woff") format("woff"), url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Regular-Web.ttf") format("truetype");
 }
 /* Atlas Grotesk Web medium */
 @font-face {
     font-family: "Atlas Grotesk Web";
     font-weight: 500;
     font-style: normal;
-    src: url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.eot");
-    src: url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.woff") format("woff"), url("/Content/fonts/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.ttf") format("truetype");
+    src: url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.eot");
+    src: url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.eot?#iefix") format("embedded-opentype"), url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.woff") format("woff"), url("#{$cc-font-path}/AtlasGroteskWeb/AtlasGrotesk-Medium-Web.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Christies";
     font-weight: normal;
     font-style: normal;
-    src: url("/Content/fonts/Christies/Christies.eot");
-    src: url("/Content/fonts/Christies/Christies.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/Christies/Christies.woff") format("woff"), url("/Content/fonts/Christies/Christies.ttf") format("truetype"), url("/Content/fonts/Christies/Christies.svg#Christies") format("svg");
+    src: url("#{$cc-font-path}/Christies/Christies.eot");
+    src: url("#{$cc-font-path}/Christies/Christies.eot?#iefix") format("embedded-opentype"), url("#{$cc-font-path}/Christies/Christies.woff") format("woff"), url("#{$cc-font-path}/Christies/Christies.ttf") format("truetype"), url("#{$cc-font-path}/Christies/Christies.svg#Christies") format("svg");
 }

@@ -1,5 +1,4 @@
 ﻿.btn--dropdown {
-    background-color:#fff;
     font-weight:700;
     border-bottom: 1px transparent solid;
     color:#000;
@@ -66,13 +65,17 @@
 }
 
 .btn--primary {
-    transition: all .15s ease-in;
-    &:hover {
+    background-color:#000;
+    color:#fff;
+    &:hover,
+    &:focus,
+    &.focus {
         color:#000;
         background-color:#fff;
         border-color:#ccc;
     }
 }
+
 
 .btn--sort {
     background-color:transparent;
@@ -86,15 +89,3 @@
     -moz-box-shadow: none;
     box-shadow: none;
 }
-
-/*.btn--checkbox {
-    background-color:#b40901;
-    color:#fff;
-    height:40px;
-    width:40px;
-    padding:0;
-
-    span {
-        line-height:40px;
-    }
-}*/

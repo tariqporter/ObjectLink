@@ -2,11 +2,10 @@
   overflow-y: scroll; 
 }
 
-.top-buffer {
-    margin-top:15px;
-}
-
-.v-center {
-    top:50%;
-    transform:translateY(-50%);
+body {
+    background: $cc-body-bg;
+    background-size: 100% auto;
+    background-repeat: no-repeat repeat-y;
+    font-family: $cc-font-family-regular;
+    font-weight: 400;
 }

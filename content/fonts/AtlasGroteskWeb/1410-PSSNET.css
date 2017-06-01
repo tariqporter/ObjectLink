@@ -1,0 +1,252 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2013 Schwartzco Inc.
+        License: 1410-PSSNET     
+*/
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Thin-Web.eot');
+  src: url('AtlasGrotesk-Thin-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Thin-Web.woff') format('woff'),
+     url('AtlasGrotesk-Thin-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Thin-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  100;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Thin-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  100;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-ThinItalic-Web.eot');
+  src: url('AtlasGrotesk-ThinItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-ThinItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-ThinItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-ThinItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  100;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-ThinItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  100;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Light-Web.eot');
+  src: url('AtlasGrotesk-Light-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Light-Web.woff') format('woff'),
+     url('AtlasGrotesk-Light-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Light-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Light-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-LightItalic-Web.eot');
+  src: url('AtlasGrotesk-LightItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-LightItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-LightItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-LightItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-LightItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Regular-Web.eot');
+  src: url('AtlasGrotesk-Regular-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Regular-Web.woff') format('woff'),
+     url('AtlasGrotesk-Regular-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Regular-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Regular-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-RegularItalic-Web.eot');
+  src: url('AtlasGrotesk-RegularItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-RegularItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-RegularItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-RegularItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-RegularItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Medium-Web.eot');
+  src: url('AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Medium-Web.woff') format('woff'),
+     url('AtlasGrotesk-Medium-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Medium-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Medium-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-MediumItalic-Web.eot');
+  src: url('AtlasGrotesk-MediumItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-MediumItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-MediumItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-MediumItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  500;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-MediumItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  500;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Bold-Web.eot');
+  src: url('AtlasGrotesk-Bold-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Bold-Web.woff') format('woff'),
+     url('AtlasGrotesk-Bold-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Bold-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Bold-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-BoldItalic-Web.eot');
+  src: url('AtlasGrotesk-BoldItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-BoldItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-BoldItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-BoldItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-BoldItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-Black-Web.eot');
+  src: url('AtlasGrotesk-Black-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-Black-Web.woff') format('woff'),
+     url('AtlasGrotesk-Black-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-Black-Web.svg#AtlasGrotesk-Black') format('svg');
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Black-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('AtlasGrotesk-BlackItalic-Web.eot');
+  src: url('AtlasGrotesk-BlackItalic-Web.eot?#iefix') format('embedded-opentype'),
+     url('AtlasGrotesk-BlackItalic-Web.woff') format('woff'),
+     url('AtlasGrotesk-BlackItalic-Web.ttf') format('truetype'),
+     url('AtlasGrotesk-BlackItalic-Web.svg#Atlas Grotesk Web') format('svg');
+  font-weight:  900;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-BlackItalic-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  900;
+  font-style:   italic;
+  font-stretch: normal;
+}
+

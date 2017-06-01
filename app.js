@@ -3,25 +3,17 @@ import ngRoute from 'angular-route'
 import ngAnimate from 'angular-animate'
 import uiBootstrap from 'angular-ui-bootstrap'
 
-//import style from './Content/bootstrap.scss'
-import style from './Content/main.scss'
-
+import ccSearchKeyword from './components/search-keyword/search-keyword.js'
+import ccSearchFooter from './components/search-footer/search-footer.js'
 import ccSearch from './components/search/search.js'
 import ccHeader from './components/header/header.js'
-import ccRefineSearch from './components/refine-search/refine-search.js'
 import ccSearchResults from './components/search-results/search-results.js'
-import ccItemDetail from './components/item-detail/item-detail.js'
 import ccNotFound from './components/not-found/not-found.js'
-import ccModalPickLists from './components/modal/pick-lists/pick-lists.js'
-import ccModalCompareItems from './components/modal/compare-items/compare-items.js'
-import ccModalZoomImage from './components/modal/zoom-image/zoom-image.js'
 import SearchService from './services/SearchService.js'
 import ModalService from './services/ModalService.js'
 
-
 angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap',
-    ccSearch.name, ccHeader.name, ccRefineSearch.name, ccSearchResults.name, ccItemDetail.name, ccNotFound.name,
-    ccModalPickLists.name, ccModalCompareItems.name, ccModalZoomImage.name,
+    ccSearchKeyword.name, ccSearchFooter.name, ccSearch.name, ccHeader.name, ccSearchResults.name, ccNotFound.name,
     SearchService.name, ModalService.name])
 
 .constant('appPath', '/Angular')
@@ -51,6 +43,9 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap',
         })
         .when("/home/index", {
             redirectTo: '/'
+        })
+        .when("/results/:query?", {
+            template: "<cc-search-results></cc-search-results>"
         })
         .when("/itemdetail/:id", {
             template: "<cc-item-detail></cc-item-detail>"

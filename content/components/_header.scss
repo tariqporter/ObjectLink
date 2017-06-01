@@ -1,0 +1,40 @@
+﻿.page--header {
+	margin-top:0;
+	margin-bottom:0;
+	padding:6px 0;
+	color:#fff;
+	height:60px;
+	position:relative;
+	background-color:#000;
+	border:none;
+
+	a {
+		top: 50%;
+		transform: translateY(-50%);
+		position:relative;
+		left: 28px;
+		width: $cc-logo-width;
+		height: $cc-logo-height;
+		display:block;
+		background: $cc-logo-bg;
+        background-size: 100%;
+        text-decoration:none;
+	}
+
+	h3 {
+		margin:0;
+		margin-left: 30px;
+		vertical-align:top;
+		font-size:20px;
+		top:50%;
+		position:relative;
+		transform: translateY(-50%);
+		color: #fff;
+		margin-left: $cc-logo-width + 15px;
+		width:100%;
+	}
+}
+
+.navbar--collapse {
+    background-color: #fff;
+}

@@ -1,11 +1,7 @@
+@import "variables";
 @import "mixins/mixins";
-
 @import "styleguide/styleguide";
 
-@import "sections/search-results";
-@import "sections/search-header";
-@import "sections/refine-search";
-@import "sections/header";
-@import "sections/search-refine-toggle";
-
-@import "wdphil"
+@import "components/header";
+@import "components/search-keyword";
+@import "components/search-footer";

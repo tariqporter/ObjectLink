@@ -1,13 +1,10 @@
-﻿
-.image--container {
-    background-color: #e4e4e4;
+﻿.image--container {
     height: auto;
     overflow: hidden;
     position: relative;
     width: 100%;
 
     img {
-        border: 1px #777 solid;
         position: absolute;
         top: -1px;
         right: -1px;
@@ -21,12 +18,6 @@
         display: block;
     }
 
-    .btn--expand {
-        position:absolute;
-        bottom:0;
-        right:0;
-    }
-
     &::before {
         content: "";
         height: 0;
@@ -34,9 +25,4 @@
         width: 100%;
         padding-bottom: 90%;
     }
-}
-
-.image--fullscreen {
-    max-width:100vw;
-    max-height:100vw;
 }

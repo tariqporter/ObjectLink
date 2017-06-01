@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "lite-server -c=bs-config.json",
-	"start:watch": "concurrently \"webpack -w\" \"npm run serve\"",
-    "start": "npm run serve"
+	  "webpack-dev-server": "webpack-dev-server --progress --inline --hot"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +18,8 @@
     "ng-annotate-webpack-plugin": "^0.2.1-pre",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "angular": "^1.6.4",

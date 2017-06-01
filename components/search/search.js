@@ -18,7 +18,10 @@ function SearchDirective() {
 function SearchController() {
     var self = this;
     self.um = {
-        refineShow: true
+        keywordInput: null,
+        camsSelected: true,
+        cosSelected: true,
+        jdeSelected: true
     };
 
     self.toggleRefineShow = function () {
