@@ -34,14 +34,15 @@ function HeaderController() {
     ];
 
     self.modal = function (menu) {
-        console.log(menu);
+        //console.log(menu);
+        console.log(self);
     };
 
     self.rightMenus = [
         {
             title: 'Manage My Pick Lists',
             subMenus: [
-                { title: 'Pick List 1', action: self.alert },
+                { title: 'Pick List 1', action: self.modal },
                 { title: 'Pick List 2' }
             ]
         },

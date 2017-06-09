@@ -1,5 +1,7 @@
 ﻿.btn--dropdown {
-    &:hover {
+    &:hover,
+    &:focus,
+    &.focus {
         > .dropdown--menu {
             display: block;
         }

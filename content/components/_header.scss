@@ -12,7 +12,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		position:relative;
-		left: 28px;
+		left: 5px;
 		width: $cc-logo-width;
 		height: $cc-logo-height;
 		display:block;
@@ -33,8 +33,30 @@
 		margin-left: $cc-logo-width + 15px;
 		width:100%;
 	}
+
+    @media (min-width: $screen-md-min) {
+        a {
+            left: 28px;
+        }
+    }
 }
 
 .navbar--collapse {
     background-color: #fff;
+}
+
+.navbar--collapse-mobile {
+    width:auto;
+    height:100%;
+    transform:translateX(100%);
+    transition:transform .35s ease-in;
+    position:fixed;
+    z-index:1;
+    right:0;
+    top:0;
+    background-color:rgba(0, 0, 0, 0.85);
+
+    &.in {
+        transform:translateX(0);
+    }
 }

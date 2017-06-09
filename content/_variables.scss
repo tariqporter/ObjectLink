@@ -1,7 +1,13 @@
 ﻿
+$cc-panel-color: transparent;
+
 /* Bootstrap variables */
-$grid-gutter-width: 0;
+/*$grid-gutter-width: 0;*/
 $border-radius-base: 0;
+$navbar-padding-horizontal: 0;
+$panel-default-heading-bg: $cc-panel-color;
+$panel-default-border: $cc-panel-color;
+$panel-bg: $cc-panel-color;
 
 /* Custom variables */
 $cc-font-path: "/Content/fonts";
@@ -14,3 +20,4 @@ $cc-font-family-web: 'Atlas Grotesk Web', Helvetica, Arial;
 $cc-checkbox-font: normal normal normal 14px/1 FontAwesome;
 $cc-checkbox-content: "\f00c";
 $cc-checkbox-color: #fff;
+$cc-panel-heading-border: $cc-panel-color 1px solid;

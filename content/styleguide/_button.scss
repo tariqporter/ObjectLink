@@ -2,7 +2,7 @@
     font-weight:700;
     border-bottom: 1px transparent solid;
     color:#000;
-    width:115px;
+    width:102px;
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -10,7 +10,7 @@
     font-family: 'Atlas Grotesk Web', Helvetica, Arial;
 
     &.large {
-        width:180px;
+        width:160px;
     }
 
     &.full {
@@ -32,7 +32,7 @@
         position:relative;
         transform:translateY(-50%);
         text-transform:uppercase;
-        font-size:12px;
+        font-size:11px;
 
         &.sub--dropdown {
             transform:translateY(0);
@@ -60,6 +60,13 @@
     width:100%;
 }
 
+.btn--toggle {
+    color:#fff;
+    &.btn:hover, &.btn:focus, &.btn.focus {
+        color:#fff;
+    }
+}
+
 .btn--default {
     transition: all .15s ease-in;
 }
@@ -75,7 +82,6 @@
         border-color:#ccc;
     }
 }
-
 
 .btn--sort {
     background-color:transparent;

@@ -1,0 +1,13 @@
+﻿.panel-group {
+  .panel {
+    border: $cc-panel-heading-border;
+
+    .panel-heading {
+        border: $cc-panel-heading-border;
+    }
+
+    + .panel {
+        margin-top: 0;
+    }
+  }
+}
