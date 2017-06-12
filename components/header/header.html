@@ -1,39 +1,39 @@
 ﻿<header class="navbar navbar-default">
     <div class="page-header page--header">
         <a href="/" class=""><h3>Object Link</h3></a>
-        <button type="button" class="btn btn--none btn--toggle pull-right visible-xs-block visible-sm-block" style="top:15px;right:0;position:absolute;" ng-click="$ctrl.um.showSiteNav = !$ctrl.um.showSiteNav">
+        <button type="button" class="btn btn--none btn--icon mobile--toggle pull-right visible-xs-block visible-sm-block" ng-click="$ctrl.um.showSiteNav = true">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
     </div>
 
     <div class="navbar--collapse-mobile visible-xs-block visible-sm-block text-right" ng-class="{'in':$ctrl.um.showSiteNav}">
         <div class="text-left">
-            <button type="button" class="btn btn--none btn--toggle" style="top:15px;position:relative;" ng-click="$ctrl.um.showSiteNav = !$ctrl.um.showSiteNav">
+            <button type="button" class="btn btn--none btn--icon mobile--toggle" ng-click="$ctrl.um.showSiteNav = false">
                 <span class="text-left">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </span>
             </button>
-            <uib-accordion close-others="true" class="text-right">
-                <div ng-repeat="menu in $ctrl.leftMenus.concat($ctrl.rightMenus)" uib-accordion-group class="panel-default" is-open="menu.isOpen">
-                    <uib-accordion-heading>
-                        <button type="button" class="btn btn--none btn--toggle">
-                            <span ng-bind="menu.title"></span>
-                            <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
-                        </button>
-                    </uib-accordion-heading>
-                    <ul class="" role="menu">
-                        <li ng-repeat="subMenu in menu.subMenus" class="">
-                            <button type="button" ng-bind="subMenu.title" class="sub--dropdown btn btn--none"></button>
-                        </li>
-                    </ul>
+            <div class="text-right">
+                <div ng-repeat="menu in $ctrl.leftMenus.concat($ctrl.rightMenus)">
+                    <button type="button" class="btn btn--none btn--icon" ng-init="menu.isCollapsed = true" ng-click="menu.isCollapsed = !menu.isCollapsed">
+                        <span ng-bind="menu.title"></span>
+                        <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    <div ng-if="menu.subMenus.length > 0" uib-collapse="menu.isCollapsed">
+                        <ul class="" role="menu">
+                            <li ng-repeat="subMenu in menu.subMenus" class="">
+                                <button type="button" ng-bind="subMenu.title" class="btn btn--none btn--icon"></button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </uib-accordion>
+            </div>
         </div>
     </div>
 
     <div class="visible-md-block visible-lg-block">
         <div class="navbar-collapse navbar--collapse collapse">
-            <ul class="nav navbar-nav navbar--nav navbar--left">
+            <ul class="nav navbar-nav navbar--nav pull-left">
                 <li ng-repeat="menu in $ctrl.leftMenus" class="btn-group btn-dropdown btn--dropdown text-center">
                     <button type="button" class="">
                         <span ng-bind="menu.title"></span>
@@ -46,7 +46,7 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar--nav navbar--right">
+            <ul class="nav navbar-nav navbar--nav pull-right">
                 <li ng-repeat="menu in $ctrl.rightMenus" class="btn-group btn-dropdown large btn--dropdown text-center">
                     <button type="button" class="">
                         <span ng-bind="menu.title"></span>
