@@ -5,6 +5,7 @@ import uiBootstrap from 'angular-ui-bootstrap'
 
 import ccSearchKeyword from './components/search-keyword/search-keyword.js'
 import ccSearchFooter from './components/search-footer/search-footer.js'
+import ccAdvancedSearch from './components/advanced-search/advanced-search.js'
 import ccSearch from './components/search/search.js'
 import ccHeader from './components/header/header.js'
 import ccSearchResults from './components/search-results/search-results.js'
@@ -13,7 +14,7 @@ import SearchService from './services/SearchService.js'
 import ModalService from './services/ModalService.js'
 
 angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap',
-    ccSearchKeyword.name, ccSearchFooter.name, ccSearch.name, ccHeader.name, ccSearchResults.name, ccNotFound.name,
+    ccSearchKeyword.name, ccSearchFooter.name, ccAdvancedSearch.name, ccSearch.name, ccHeader.name, ccSearchResults.name, ccNotFound.name,
     SearchService.name, ModalService.name])
 
 .constant('appPath', '/Angular')
