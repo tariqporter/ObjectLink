@@ -15,3 +15,30 @@
 .navbar {
     border:none;
 }
+
+.nav-tabs {
+    background-color: $cc-nav-tabs-inactive-link-bg;
+
+    > li {
+        > a {
+            margin-right: 0;
+            border-width:0;
+        }
+
+        &.active > a {
+          &,
+          &:hover,
+          &:focus {
+            border: none;
+          }
+       }
+    }
+}
+
+.nav > li > a {
+    color: $nav-tabs-active-link-hover-bg;
+
+    &:hover, &:focus {
+        color: #575757;
+    }
+}

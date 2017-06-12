@@ -12,9 +12,15 @@
 				<cc-search-keyword um="$ctrl.um"></cc-search-keyword>
 			</div>
             <div class="row">
-                <cc-advanced-search um="$ctrl.um"></cc-advanced-search>
+                <uib-tabset active="$ctrl.um.activeTab">
+                    <uib-tab index="0" heading="Advanced Search">
+                        <cc-advanced-search um="$ctrl.um"></cc-advanced-search>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Query Builder">
+                    </uib-tab>
+                </uib-tabset>
             </div>
-            <div class="row">
+            <div class="row bottom-buffer">
                 <cc-search-footer um="$ctrl.um"></cc-search-footer>
             </div>
 		</div>

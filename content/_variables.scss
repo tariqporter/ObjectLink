@@ -9,6 +9,9 @@ $panel-default-heading-bg: $cc-panel-color;
 $panel-default-border: $cc-panel-color;
 $panel-bg: $cc-panel-color;
 $navbar-default-bg: transparent;
+$nav-tabs-active-link-hover-bg: #cccccc;
+$nav-tabs-active-link-hover-color:#575757;
+$nav-link-hover-bg:#cccccc;
 
 /* Custom variables */
 $cc-font-path: "/Content/fonts";
@@ -22,3 +25,4 @@ $cc-checkbox-font: normal normal normal 14px/1 FontAwesome;
 $cc-checkbox-content: "\f00c";
 $cc-checkbox-color: #fff;
 $cc-panel-heading-border: $cc-panel-color 1px solid;
+$cc-nav-tabs-inactive-link-bg:#575757;
