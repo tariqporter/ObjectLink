@@ -83,18 +83,35 @@
     }
 }
 
-.btn--radio {
+/*Very specific so as to override bootstrap*/
+.btn.btn--radio {
     background-color: #fff;
-    border-radius: 50% !important;
+    border-radius:50%;
+    margin:0 5px;
+    width:32px;
+    height:32px;
+    padding:0;
+    font-weight:bold;
+
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border-radius: 50%;
+    }
+
+    &:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+    }
+
     &.active {
-        color:#fff;
+        color: #fff;
         background-color: #b30900;
     }
 }
-
-/*.btn--sort {
-    background-color:transparent;
-}*/
 
 .btn--none {
     border:none;

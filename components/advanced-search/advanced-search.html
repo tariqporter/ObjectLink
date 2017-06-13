@@ -1,3 +1,21 @@
 <div class="advanced--search">
     <cc-advanced-search-header fm="$ctrl.fm"></cc-advanced-search-header>
 </div>
+<div class="advanced--search">
+    <uib-accordion class="accordion--group section--header input--buffer">
+        <div uib-accordion-group is-open="$ctrl.um.departmentsOpen" class="panel-default">
+            <uib-accordion-heading>
+                <button class="btn btn--none section--header-btn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <label class="" role="button">Object Details</label>
+                <button class="btn btn--none pull-right section--header-btn">
+                    <i class="fa" ng-class="{'fa-chevron-down':!$ctrl.um.departmentsOpen, 'fa-chevron-up': $ctrl.um.departmentsOpen}" aria-hidden="true"></i>
+                </button>
+            </uib-accordion-heading>
+            <div class="">
+                <cc-advanced-search-obj-details fm="$ctrl.fm"></cc-advanced-search-obj-details>
+            </div>
+        </div>
+    </uib-accordion>
+</div>

@@ -84,8 +84,8 @@
             </uib-accordion-heading>
             <div class="panel-body-inner">
                 <ul class="list-inline checkbox--group">
-                    <li class="col-xs-4" ng-repeat="cluser in $ctrl.fm.clusters">
-                        <label class="checkbox--label">
+                    <li class="col-xs-6 col-sm-4" ng-repeat="cluser in $ctrl.fm.clusters">
+                        <label class="checkbox--label accordion--item">
                             <input type="checkbox" ng-model="cluser.selected" />
                             <span class="checkbox" ng-bind="cluser.clusterName"></span>
                         </label>
@@ -106,8 +106,8 @@
             </uib-accordion-heading>
             <div class="panel-body-inner">
                 <ul class="list-inline checkbox--group">
-                    <li class="col-xs-4" ng-repeat="department in $ctrl.fm.departments">
-                        <label class="checkbox--label">
+                    <li class="col-xs-6 col-sm-4" ng-repeat="department in $ctrl.fm.departments">
+                        <label class="checkbox--label accordion--item">
                             <input type="checkbox" ng-model="department.selected" />
                             <span class="checkbox" ng-bind="department.departmentName"></span>
                         </label>

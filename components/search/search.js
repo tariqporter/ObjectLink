@@ -45,6 +45,23 @@ function SearchController() {
             { departmentId: 2, departmentName: 'Chinese Paintings' },
             { departmentId: 3, departmentName: 'Chinese Works of Art' },
             { departmentId: 4, departmentName: 'Japanese and Korean Art' }
+        ],
+        statuses: [
+            { statusId: 0, statusName: 'Masterpiece' },
+            { statusId: 1, statusName: 'Stolen' },
+            { statusId: 2, statusName: 'Fake' },
+            { statusId: 3, statusName: 'Looted' },
+            { statusId: 4, statusName: 'Lost' },
+            { statusId: 5, statusName: 'Condition Issues' },
+        ],
+        categories: [
+            { categoryId: 0, categoryName: 'Painting' },
+            { categoryId: 1, categoryName: 'Print' },
+            { categoryId: 2, categoryName: 'Sculpture' },
+            { categoryId: 3, categoryName: 'Other' },
+            { categoryId: 4, categoryName: 'Installation' },
+            { categoryId: 5, categoryName: 'Works on Paper' },
+            { categoryId: 6, categoryName: 'Photograph' }
         ]
     };
 }

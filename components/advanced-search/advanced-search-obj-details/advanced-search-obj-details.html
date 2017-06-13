@@ -1,0 +1,129 @@
+<div class="col-xs-12">
+    <div class="col-xs-12">
+        <ul class="list-inline list-inline top--buffer bottom--buffer">
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="0" ng-model="$ctrl.fm.objectTypeId" />
+                    <span class="checkbox radio">Fine Arts</span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="1" ng-model="$ctrl.fm.objectTypeId" />
+                    <span class="checkbox radio">Watches</span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="2" ng-model="$ctrl.fm.objectTypeId" />
+                    <span class="checkbox radio">Other</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="Title" />
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="Medium" />
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="Details / Description" />
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="Edition" />
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="Edition of" />
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input--buffer" placeholder="No. of parts / Quantity" />
+    </div>
+    <div class="col-xs-12">
+        <div class="form--group input--buffer">
+            <div class="col-xs-12">
+                <label class="form--group-label">Status</label>
+            </div>
+	        <ul class="list-inline checkbox--group" ng-repeat="status in $ctrl.fm.statuses">
+		        <li class="col-xs-6 pad--level-xs-2">
+			        <label class="checkbox--label">
+				        <input type="checkbox" ng-model="status.selected" />
+				        <span class="checkbox" ng-bind="status.statusName"></span>
+			        </label>
+		        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <div class="form--group input--buffer">
+        <div class="col-xs-12">
+            <label class="form--group-label">Dimensions</label>
+            <div class="btn-group" role="group" aria-label="currencies">
+                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="0" ng-model="$ctrl.fm.dimension">cm</button>
+                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="1" ng-model="$ctrl.fm.dimension">in</button>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Min. Height" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Max. Height" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Min. Width/Diam" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Max. Width/Diam" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Min. Depth" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Max. Depth" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Min. Area" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input--buffer" placeholder="Max. Area" />
+        </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <ul class="list-inline top--buffer bottom--buffer pad--level-xs-2">
+        <li>
+            <label class="checkbox--label">
+                <input type="radio" uib-btn-radio="0" ng-model="$ctrl.fm.objectTypeId" />
+                <span class="checkbox radio">All</span>
+            </label>
+        </li>
+        <li>
+            <label class="checkbox--label">
+                <input type="radio" uib-btn-radio="1" ng-model="$ctrl.fm.objectTypeId" />
+                <span class="checkbox radio">Objects</span>
+            </label>
+        </li>
+        <li>
+            <label class="checkbox--label">
+                <input type="radio" uib-btn-radio="2" ng-model="$ctrl.fm.objectTypeId" />
+                <span class="checkbox radio">Soft Intelligence only</span>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="col-xs-12">
+    <div class="form--group input--buffer">
+        <div class="col-xs-12">
+            <label class="form--group-label">Category</label>
+        </div>
+        <ul class="list-inline checkbox--group" ng-repeat="category in $ctrl.fm.categories">
+            <li class="col-xs-6 pad--level-xs-2">
+                <label class="checkbox--label">
+                    <input type="checkbox" ng-model="category.selected" />
+                    <span class="checkbox" ng-bind="category.categoryName"></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
