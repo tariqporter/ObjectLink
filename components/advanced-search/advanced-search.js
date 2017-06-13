@@ -1,9 +1,10 @@
 import ccAdvancedSearchHeader from './advanced-search-header/advanced-search-header.js';
 import ccAdvancedSearchObjDetails from './advanced-search-obj-details/advanced-search-obj-details.js';
+import ccAdvancedSearchAccordion from './advanced-search-accordion/advanced-search-accordion.js';
 
 import template from './advanced-search.html';
 
-export default angular.module('cc.advanced-search', [ccAdvancedSearchHeader.name, ccAdvancedSearchObjDetails.name])
+export default angular.module('cc.advanced-search', [ccAdvancedSearchHeader.name, ccAdvancedSearchObjDetails.name, ccAdvancedSearchAccordion.name])
 	.controller('AdvancedSearchController', AdvancedSearchController)
 	.directive('ccAdvancedSearch', AdvancedSearchDirective);
 
@@ -21,5 +22,8 @@ function AdvancedSearchDirective() {
 }
 
 function AdvancedSearchController() {
-	var self = this;
+    var self = this;
+    self.um = {
+
+    };
 }
