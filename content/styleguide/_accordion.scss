@@ -1,0 +1,30 @@
+.accordion--group {
+    background-color: #fff;
+    float: left;
+    width: 100%;
+
+    .accordion-toggle {
+        display: block;
+        width: 100%;
+    }
+
+    .panel-group {
+        margin-bottom: 0;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .panel-title {
+        font-size: 14px;
+
+        label {
+            margin-top:5px;
+        }
+    }
+
+    .panel-body {
+        padding-top:5px;
+    }
+}

@@ -38,6 +38,13 @@ function SearchController() {
             { clusterId: 7, clusterName: 'Post-War and Contemporary' },
             { clusterId: 8, clusterName: 'Science and Books' },
             { clusterId: 9, clusterName: 'World Art' }
+        ],
+        departments: [
+            { departmentId: 0, departmentName: 'Asian' },
+            { departmentId: 1, departmentName: 'Asian Contemporary Art' },
+            { departmentId: 2, departmentName: 'Chinese Paintings' },
+            { departmentId: 3, departmentName: 'Chinese Works of Art' },
+            { departmentId: 4, departmentName: 'Japanese and Korean Art' }
         ]
     };
 }
