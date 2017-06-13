@@ -11,7 +11,7 @@ function AdvancedSearchDirective() {
 		restrict: 'E',
 		scope: {},
 		bindToController: {
-
+            fm: '='
 		},
 		controllerAs: '$ctrl',
 		template: template,

@@ -9,7 +9,7 @@ function AdvancedSearchHeaderDirective() {
 		restrict: 'E',
 		scope: {},
 		bindToController: {
-
+            fm: '='
 		},
 		controllerAs: '$ctrl',
 		template: template,
@@ -18,5 +18,5 @@ function AdvancedSearchHeaderDirective() {
 }
 
 function AdvancedSearchHeaderController() {
-	var self = this;
+    var self = this;
 }

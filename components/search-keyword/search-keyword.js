@@ -9,7 +9,7 @@ function SearchKeywordDirective() {
         restrict: 'E',
         scope: {},
         bindToController: {
-            um: '='
+            fm: '='
         },
         controllerAs: '$ctrl',
         template: template,
@@ -21,6 +21,6 @@ function SearchKeywordController() {
     var self = this;
 	
     self.clear = function () {
-        self.um.keywordInput = null;
+        self.fm.keywordInput = null;
     };
 }

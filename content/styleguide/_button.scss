@@ -83,6 +83,15 @@
     }
 }
 
+.btn--radio {
+    background-color: #fff;
+    border-radius: 50% !important;
+    &.active {
+        color:#fff;
+        background-color: #b30900;
+    }
+}
+
 /*.btn--sort {
     background-color:transparent;
 }*/

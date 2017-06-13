@@ -3,6 +3,7 @@ $cc-panel-color: transparent;
 
 /* Bootstrap variables */
 /*$grid-gutter-width: 0;*/
+$grid-gutter-width:12px;
 $border-radius-base: 0;
 $navbar-padding-horizontal: 0;
 $panel-default-heading-bg: $cc-panel-color;
@@ -12,6 +13,7 @@ $navbar-default-bg: transparent;
 $nav-tabs-active-link-hover-bg: #cccccc;
 $nav-tabs-active-link-hover-color:#575757;
 $nav-link-hover-bg:#cccccc;
+/*$btn-default-color: #fff;*/
 
 /* Custom variables */
 $cc-font-path: "/Content/fonts";

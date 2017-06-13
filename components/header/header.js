@@ -34,7 +34,6 @@ function HeaderController() {
     ];
 
     self.modal = function (menu) {
-        //console.log(menu);
         console.log(self);
     };
 

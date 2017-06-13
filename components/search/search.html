@@ -8,20 +8,20 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="row top-buffer">
-				<cc-search-keyword um="$ctrl.um"></cc-search-keyword>
+			<div class="row top--buffer">
+				<cc-search-keyword fm="$ctrl.fm"></cc-search-keyword>
 			</div>
             <div class="row">
                 <uib-tabset active="$ctrl.um.activeTab">
                     <uib-tab index="0" heading="Advanced Search">
-                        <cc-advanced-search um="$ctrl.um"></cc-advanced-search>
+                        <cc-advanced-search fm="$ctrl.fm"></cc-advanced-search>
                     </uib-tab>
                     <uib-tab index="1" heading="Query Builder">
                     </uib-tab>
                 </uib-tabset>
             </div>
-            <div class="row bottom-buffer">
-                <cc-search-footer um="$ctrl.um"></cc-search-footer>
+            <div class="row bottom--buffer">
+                <cc-search-footer fm="$ctrl.fm"></cc-search-footer>
             </div>
 		</div>
 	</div>

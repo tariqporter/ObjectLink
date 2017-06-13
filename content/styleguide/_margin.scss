@@ -1,13 +1,30 @@
-﻿.top-buffer {
+﻿.top--buffer {
     margin-top:15px;
 }
 
-.bottom-buffer {
+.bottom--buffer {
     margin-bottom: 15px;
+}
+
+.input--buffer {
+    margin-top:5px;
 }
 
 .full--width {
     .col-full--width {
         padding:0;
     }
+}
+
+.no--padding-left {
+    padding-left: 0 !important;
+}
+
+.no--padding-right {
+    padding-right: 0 !important;
+}
+
+.no--padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }

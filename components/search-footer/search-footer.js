@@ -9,7 +9,7 @@ function SearchFooterDirective() {
         restrict: 'E',
         scope: {},
         bindToController: {
-            um: '='
+            fm: '='
         },
         controllerAs: '$ctrl',
         template: template,
@@ -21,6 +21,6 @@ function SearchFooterController($location) {
     var self = this;
 	
     self.search = function() {
-        $location.path('results').search('query',  Object.keys(self.um).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.um[k])}`).join('&'));
+        $location.path('results').search('query',  Object.keys(self.fm).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.fm[k])}`).join('&'));
     };
 }

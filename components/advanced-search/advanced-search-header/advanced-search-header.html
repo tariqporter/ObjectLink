@@ -1,6 +1,75 @@
-<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-    <input type="text" class="form-control" placeholder="Search" />
+<div class="col-xs-12 col-md-8">
+    <div class="col-xs-6 no--padding-left">
+        <input type="text" class="form-control input--buffer" placeholder="Artist" />
+    </div>
+    <div class="col-xs-6 no--padding-right">
+        <input type="text" class="form-control input--buffer" placeholder="CAMS item #/COS Object" />
+    </div>
+    <div class="col-xs-12 no--padding">
+        <div class="form--group input--buffer">
+            <div class="col-xs-12">
+                <label class="form--group-label">Execution dates</label>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="From" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.fromDate" is-open="$ctrl.fm.fromDateOpen" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="$ctrl.um.fromDateOpen = true">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="To" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.toDate" is-open="$ctrl.fm.toDateOpen" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="$ctrl.fm.toDateOpen = true">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-    <input type="text" class="form-control" placeholder="CAMS item #/COS Object etc" />
+<div class="col-xs-12 col-md-4">
+    <div class="form--group input--buffer">
+        <div class="col-xs-12">
+            <label class="form--group-label">Value</label>
+            <div class="btn-group" role="group" aria-label="currencies">
+                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="0" ng-model="$ctrl.fm.currencyId">&pound;</button>
+                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="1" ng-model="$ctrl.fm.currencyId">&euro;</button>
+                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="2" ng-model="$ctrl.fm.currencyId">$</button>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <label class="form--group-label"><small>Minimum</small></label>
+            <input type="text" class="form-control input--buffer" placeholder="From" />
+        </div>
+        <div class="col-xs-6">
+            <label class="form--group-label"><small>Maximum</small></label>
+            <input type="text" class="form-control input--buffer" placeholder="To" />
+        </div>
+        <div class="col-xs-6">
+            <div class="input-group input--buffer">
+                <input type="text" class="form-control" placeholder="From" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.valueFromDate" is-open="$ctrl.fm.valueFromDateOpen" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="$ctrl.fm.valueFromDateOpen = true">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="input-group input--buffer">
+                <input type="text" class="form-control" placeholder="To" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.valueToDate" is-open="$ctrl.fm.valueToDateOpen" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="$ctrl.fm.valueToDateOpen = true">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>

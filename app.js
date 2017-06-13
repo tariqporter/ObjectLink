@@ -22,12 +22,26 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap',
 //.constant('apiPath', 'http://localhost:53187/api')
 .constant('apiPath', 'http://ppapp05u:9097/api')
 
-.run(['$rootScope', '$uibModalStack', function ($rootScope, $uibModalStack) {
+.run(['$rootScope', '$uibModalStack', '$http', '$templateCache', function ($rootScope, $uibModalStack, $http, $templateCache) {
     $rootScope.$on('$routeChangeSuccess', function (newVal, oldVal) {
         if (oldVal !== newVal) {
             $uibModalStack.dismissAll();
         }
     });
+
+    $http.get("/template/datepickerPopup/popup.html").then(function (response) {
+        $templateCache.put("uib/template/datepickerPopup/popup.html", response.data);
+    });
+    $http.get("/template/datepicker/day.html").then(function (response) {
+        $templateCache.put("uib/template/datepicker/day.html", response.data);
+    });
+    $http.get("/template/datepicker/month.html").then(function (response) {
+        $templateCache.put("uib/template/datepicker/month.html", response.data);
+    });
+    $http.get("/template/datepicker/year.html").then(function (response) {
+        $templateCache.put("uib/template/datepicker/year.html", response.data);
+    });
+
 }])
 
 .config(['$routeProvider', '$locationProvider', '$qProvider', function ($routeProvider, $locationProvider, $qProvider) {
