@@ -14,7 +14,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="From" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.fromDate" is-open="$ctrl.fm.fromDateOpen" />
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="$ctrl.um.fromDateOpen = true">
+                        <button class="btn btn-default" type="button" ng-click="$ctrl.fm.fromDateOpen = true">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                         </button>
                     </span>
@@ -71,5 +71,21 @@
                 </span>
             </div>
         </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <button type="button" class="btn btn--none btn--icon" ng-init="$ctrl.um.isClusterCollapsed = true" ng-click="$ctrl.um.isClusterCollapsed = !$ctrl.um.isClusterCollapsed">
+        <span>Select cluster</span>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    <div uib-collapse="$ctrl.um.isClusterCollapsed">
+        <ul class="list-inline checkbox--group">
+            <li class="col-xs-4" ng-repeat="cluser in $ctrl.fm.clusters">
+                <label class="checkbox--label">
+                    <input type="checkbox" ng-model="$ctrl.fm.camsSelected" />
+                    <span class="checkbox" ng-bind="cluser.clusterName"></span>
+                </label>
+            </li>
+        </ul>
     </div>
 </div>

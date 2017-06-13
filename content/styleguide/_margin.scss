@@ -1,13 +1,13 @@
 ﻿.top--buffer {
-    margin-top:15px;
+    margin-top: $grid-gutter-width;
 }
 
 .bottom--buffer {
-    margin-bottom: 15px;
+    margin-bottom: $grid-gutter-width;
 }
 
 .input--buffer {
-    margin-top:5px;
+    margin-top: floor(($grid-gutter-width / 2));
 }
 
 .full--width {
