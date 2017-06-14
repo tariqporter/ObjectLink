@@ -112,16 +112,43 @@
         </li>
     </ul>
 </div>
-<div class="col-xs-12">
+<div class="col-xs-12 col-md-6">
     <div class="form--group input--buffer">
         <div class="col-xs-12">
             <label class="form--group-label">Category</label>
         </div>
-        <ul class="list-inline checkbox--group" ng-repeat="category in $ctrl.fm.categories">
-            <li class="col-xs-6 pad--level-xs-2">
+        <ul class="list-inline checkbox--group pad--level-xs-1" ng-repeat="category in $ctrl.fm.categories">
+            <li class="col-xs-6">
                 <label class="checkbox--label">
                     <input type="checkbox" ng-model="category.selected" />
                     <span class="checkbox" ng-bind="category.categoryName"></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="col-xs-12 col-md-6">
+    <div class="form--group input--buffer">
+        <div class="col-xs-12">
+            <label class="form--group-label">Show Images?</label>
+        </div>
+        <ul class="list-inline list-inline top--buffer bottom--buffer pad--level-xs-1">
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="0" ng-model="$ctrl.fm.imageSelection" />
+                    <span class="checkbox radio">All Imagess</span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="1" ng-model="$ctrl.fm.imageSelection" />
+                    <span class="checkbox radio">With Images</span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox--label">
+                    <input type="radio" uib-btn-radio="2" ng-model="$ctrl.fm.imageSelection" />
+                    <span class="checkbox radio">No Images</span>
                 </label>
             </li>
         </ul>
