@@ -1,11 +1,12 @@
-.form--group {
+.form-group {
+    border: 2px solid #fff;
     background-color: #bbbbbb;
     padding: floor(($grid-gutter-width / 2));
     float: left;
     width:100%;
 }
 
-.vertical--align {
+.vertical-align {
     display: flex;
     align-items: center;
 }

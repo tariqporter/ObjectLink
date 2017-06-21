@@ -27,41 +27,57 @@ function SearchController() {
         cosSelected: true,
         jdeSelected: true,
         currencyId: 0,
+        valueFromDate: null,
         clusters: [
-            { clusterId: 0, clusterName: '20th and 21st Centuary Culture' },
-            { clusterId: 1, clusterName: 'Asian' },
-            { clusterId: 2, clusterName: 'Decorative Arts' },
-            { clusterId: 3, clusterName: 'Historic' },
-            { clusterId: 4, clusterName: 'Impressionist and Modern' },
-            { clusterId: 5, clusterName: 'Luxury' },
-            { clusterId: 6, clusterName: 'Old Masters 19th Centuary and Russian' },
-            { clusterId: 7, clusterName: 'Post-War and Contemporary' },
-            { clusterId: 8, clusterName: 'Science and Books' },
-            { clusterId: 9, clusterName: 'World Art' }
+            { id: 0, name: '20th and 21st Centuary Culture' },
+            { id: 1, name: 'Asian' },
+            { id: 2, name: 'Decorative Arts' },
+            { id: 3, name: 'Historic' },
+            { id: 4, name: 'Impressionist and Modern' },
+            { id: 5, name: 'Luxury' },
+            { id: 6, name: 'Old Masters 19th Centuary and Russian' },
+            { id: 7, name: 'Post-War and Contemporary' },
+            { id: 8, name: 'Science and Books' },
+            { id: 9, name: 'World Art' }
         ],
         departments: [
-            { departmentId: 0, departmentName: 'Asian' },
-            { departmentId: 1, departmentName: 'Asian Contemporary Art' },
-            { departmentId: 2, departmentName: 'Chinese Paintings' },
-            { departmentId: 3, departmentName: 'Chinese Works of Art' },
-            { departmentId: 4, departmentName: 'Japanese and Korean Art' }
+            { id: 0, name: 'Asian' },
+            { id: 1, name: 'Asian Contemporary Art' },
+            { id: 2, name: 'Chinese Paintings' },
+            { id: 3, name: 'Chinese Works of Art' },
+            { id: 4, name: 'Japanese and Korean Art' }
         ],
         statuses: [
-            { statusId: 0, statusName: 'Masterpiece' },
-            { statusId: 1, statusName: 'Stolen' },
-            { statusId: 2, statusName: 'Fake' },
-            { statusId: 3, statusName: 'Looted' },
-            { statusId: 4, statusName: 'Lost' },
-            { statusId: 5, statusName: 'Condition Issues' },
+            { id: 0, name: 'Masterpiece' },
+            { id: 1, name: 'Stolen' },
+            { id: 2, name: 'Fake' },
+            { id: 3, name: 'Looted' },
+            { id: 4, name: 'Lost' },
+            { id: 5, name: 'Condition Issues' },
         ],
         categories: [
-            { categoryId: 0, categoryName: 'Painting' },
-            { categoryId: 1, categoryName: 'Print' },
-            { categoryId: 2, categoryName: 'Sculpture' },
-            { categoryId: 3, categoryName: 'Other' },
-            { categoryId: 4, categoryName: 'Installation' },
-            { categoryId: 5, categoryName: 'Works on Paper' },
-            { categoryId: 6, categoryName: 'Photograph' }
-        ]
+            { id: 0, name: 'Painting' },
+            { id: 1, name: 'Print' },
+            { id: 2, name: 'Sculpture' },
+            { id: 3, name: 'Other' },
+            { id: 4, name: 'Installation' },
+            { id: 5, name: 'Works on Paper' },
+            { id: 6, name: 'Photograph' }
+        ],
+        valuationTypes: [
+            { id: 0, name: 'Valuation Type 1' },
+            { id: 1, name: 'Valuation Type 2' }
+        ],
+        valuationTypeSelected: null,
+        officeOfEntry: [
+            { id: 0, name: 'Office of Entry 1' },
+            { id: 0, name: 'Office of Entry 2' }
+        ],
+        officeOfEntrySelected: null,
+        auctionHouses: [
+            { id: 0, name: 'Sotheby\'s' },
+            { id: 1, name: 'Christie\'s' },
+        ],
+        auctionHouseSelected: null,
     };
 }

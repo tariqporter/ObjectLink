@@ -1,28 +1,28 @@
-﻿<header class="navbar navbar-default">
-    <div class="page-header page--header">
+﻿<header class="navbar navbar-default header">
+    <div class="page-header header__head">
         <a href="/" class=""><h3>Object Link</h3></a>
-        <button type="button" class="btn btn--none btn--icon mobile--toggle pull-right visible-xs-block visible-sm-block" ng-click="$ctrl.um.showSiteNav = true">
+        <button type="button" class="btn btn__none btn__icon header__mobile-toggle pull-right visible-xs-block visible-sm-block" ng-click="$ctrl.um.showSiteNav = true">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
     </div>
 
-    <div class="navbar--collapse-mobile visible-xs-block visible-sm-block text-right" ng-class="{'in':$ctrl.um.showSiteNav}">
+    <div class="navbar_collapse__mobile visible-xs-block visible-sm-block text-right" ng-class="{'in':$ctrl.um.showSiteNav}">
         <div class="text-left">
-            <button type="button" class="btn btn--none btn--icon mobile--toggle" ng-click="$ctrl.um.showSiteNav = false">
+            <button type="button" class="btn btn__none btn__icon navbar_collapse__mobile-toggle" ng-click="$ctrl.um.showSiteNav = false">
                 <span class="text-left">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </span>
             </button>
             <div class="text-right">
                 <div ng-repeat="menu in $ctrl.leftMenus.concat($ctrl.rightMenus)">
-                    <button type="button" class="btn btn--none btn--icon" ng-init="menu.isCollapsed = true" ng-click="menu.isCollapsed = !menu.isCollapsed">
+                    <button type="button" class="btn btn__none btn__icon" ng-init="menu.isCollapsed = true" ng-click="menu.isCollapsed = !menu.isCollapsed">
                         <span ng-bind="menu.title"></span>
                         <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
                     <div ng-if="menu.subMenus.length > 0" uib-collapse="menu.isCollapsed">
                         <ul class="" role="menu">
                             <li ng-repeat="subMenu in menu.subMenus" class="">
-                                <button type="button" ng-bind="subMenu.title" class="btn btn--none btn--icon"></button>
+                                <button type="button" ng-bind="subMenu.title" class="btn btn__none btn__icon"></button>
                             </li>
                         </ul>
                     </div>
@@ -32,14 +32,14 @@
     </div>
 
     <div class="visible-md-block visible-lg-block">
-        <div class="navbar-collapse navbar--collapse collapse">
+        <div class="navbar-collapse navbar_collapse collapse">
             <ul class="nav navbar-nav navbar--nav pull-left">
-                <li ng-repeat="menu in $ctrl.leftMenus" class="btn-group btn-dropdown btn--dropdown text-center">
+                <li ng-repeat="menu in $ctrl.leftMenus" class="btn-group btn-dropdown btn__dropdown text-center">
                     <button type="button" class="">
                         <span ng-bind="menu.title"></span>
                         <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
-                    <ul class="dropdown-menu dropdown--menu" uib-dropdown-menu role="menu">
+                    <ul class="dropdown-menu btn__dropdown__menu" uib-dropdown-menu role="menu">
                         <li ng-repeat="subMenu in menu.subMenus" class="">
                             <button type="button" ng-bind="subMenu.title" class="sub--dropdown"></button>
                         </li>
@@ -47,12 +47,12 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar--nav pull-right">
-                <li ng-repeat="menu in $ctrl.rightMenus" class="btn-group btn-dropdown large btn--dropdown text-center">
+                <li ng-repeat="menu in $ctrl.rightMenus" class="btn-group btn-dropdown large btn__dropdown text-center">
                     <button type="button" class="">
                         <span ng-bind="menu.title"></span>
                         <i ng-if="menu.subMenus.length > 0" class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
-                    <ul class="dropdown-menu dropdown--menu" uib-dropdown-menu role="menu">
+                    <ul class="dropdown-menu btn__dropdown__menu" uib-dropdown-menu role="menu">
                         <li ng-repeat="subMenu in menu.subMenus" class="">
                             <button type="button" ng-bind="subMenu.title" ng-click="subMenu.action(subMenu)" class="sub--dropdown"></button>
                         </li>

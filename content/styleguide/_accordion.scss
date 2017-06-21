@@ -1,26 +1,20 @@
-.accordion--group {
+.accordion-group {
     background-color: #fff;
     float: left;
     width: 100%;
-    /*.accordion-col:nth-child(2n+1) {
-        clear: left;
-    }
 
-    .accordion-col:nth-child(2n+2) {
-        clear: right;
-    }*/
-    .accordion--item {
+    &__item {
         height: 60px;
     }
 
-    &.section--header {
+    &__header {
         background-color: transparent;
 
         a {
             text-decoration: none;
         }
 
-        .section--header-btn {
+        __header-btn {
             color: #fff;
             font-size: 20px
         }
@@ -63,7 +57,7 @@
     }
 
     @media (min-width: $screen-sm-min) {
-        .accordion--item {
+        .__item {
             height: 40px;
         }
     }

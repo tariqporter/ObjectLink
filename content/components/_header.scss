@@ -1,71 +1,74 @@
-﻿.page--header {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 6px 0;
-    color: #fff;
-    height: 60px;
-    position: relative;
-    background-color: #000;
-    border: none;
-
-    a {
-        top: 50%;
-        transform: translateY(-50%);
-        position: relative;
-        left: 5px;
-        width: $cc-logo-width;
-        height: $cc-logo-height;
-        display: block;
-        background: $cc-logo-bg;
-        background-size: 100%;
-        text-decoration: none;
-    }
-
-    h3 {
-        margin: 0;
-        margin-left: 30px;
-        vertical-align: top;
-        font-size: 20px;
-        top: 50%;
-        position: relative;
-        transform: translateY(-50%);
-        color: #fff;
-        margin-left: $cc-logo-width + 15px;
-        width: 100%;
-    }
-
-    .mobile--toggle {
+﻿.header {
+    &__mobile-toggle {
         top: -15px;
         position: relative;
     }
 
-    @media (min-width: $screen-md-min) {
+    &__head {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 6px 0;
+        color: #fff;
+        height: 60px;
+        position: relative;
+        background-color: #000;
+        border: none;
+
         a {
-            left: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: relative;
+            left: 5px;
+            width: $cc-logo-width;
+            height: $cc-logo-height;
+            display: block;
+            background: $cc-logo-bg;
+            background-size: 100%;
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: 0;
+            margin-left: 30px;
+            vertical-align: top;
+            font-size: 20px;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            color: #fff;
+            margin-left: $cc-logo-width + 15px;
+            width: 100%;
+        }
+
+        @media (min-width: $screen-md-min) {
+            a {
+                left: 28px;
+            }
         }
     }
 }
 
-.navbar--collapse {
+.navbar_collapse {
     background-color: #fff;
-}
 
-.navbar--collapse-mobile {
-    width: auto;
-    height: 100%;
-    transform: translateX(100%);
-    transition: transform .35s ease-in;
-    position: fixed;
-    z-index: 3;
-    right: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    &__mobile {
+        width: auto;
+        height: 100%;
+        transform: translateX(100%);
+        transition: transform .35s ease-in;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.85);
 
-    &.in {
-        transform: translateX(0);
+        &.in {
+            transform: translateX(0);
+        }
     }
 
-    .mobile--toggle {
+
+    &__mobile-toggle {
         top: 15px;
         position: relative;
     }

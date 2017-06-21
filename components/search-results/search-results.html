@@ -1,14 +1,21 @@
-﻿<div class="container-fluid">
+﻿<div class="container-fluid full-width">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <cc-header class="cc-header"></cc-header>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-full-width">
+            <cc-header></cc-header>
         </div>
     </div>
 </div>
+<!--<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <button type="button" ng-click="$ctrl.showResultsFilter()">Filter Results</button>
+        </div>
+    </div>
+</div>-->
 <div class="container">
     <div class="row">
-        <h1 style="color:white;background-color:black;">
-            You searched for <span ng-bind="$ctrl.um.query"></span>
-        </h1>
+        <div class="col-xs-12">
+            <cc-search-results-items></cc-search-results-items>
+        </div>
     </div>
 </div>

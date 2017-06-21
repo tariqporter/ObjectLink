@@ -20,4 +20,75 @@
         </div>
     </div>
 </div>
-
+<div class="col-xs-12 col-md-6 pad-level-xs-2">
+    <div class="form-group input-buffer">
+        <div class="col-xs-12">
+            <label class="">Valuation / Pricing</label>
+        </div>
+        <ul class="list-inline" ng-repeat="valuationType in $ctrl.fm.valuationTypes">
+            <li class="col-xs-6 pad-level-xs-2">
+                <label class="checkbox-label">
+                    <input type="checkbox" ng-model="valuationType.selected" />
+                    <span class="checkbox" ng-bind="valuationType.valuationTypeName"></span>
+                </label>
+            </li>
+        </ul>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input-buffer" placeholder="CAMS Valuation ID" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input-buffer" placeholder="CAMS Itemd ID" />
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-md-6 pad-level-xs-2">
+    <div class="form-group input-buffer">
+        <div class="col-xs-12">
+            <label class="form-group-label">Value</label>
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input-buffer" placeholder="Minimum" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control input-buffer" placeholder="Maximum" />
+        </div>
+        <div class="col-xs-12">
+            <div class="select-container form-control input-buffer">
+                <select ng-class="{'unselected': $ctrl.fm.valuationTypeSelected===null}" ng-options="item as item.name for item in $ctrl.fm.valuationTypes track by item.id" ng-model="$ctrl.fm.valuationTypeSelected">
+                    <option value="">Valuation Type</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <input type="text" class="form-control input-buffer" placeholder="Valuer" />
+        </div>
+        <div class="col-xs-12">
+            <div class="select-container form-control input-buffer">
+                <select ng-class="{'unselected': $ctrl.fm.officeOfEntrySelected===null}" ng-options="item as item.name for item in $ctrl.fm.officeOfEntry track by item.id" ng-model="$ctrl.fm.officeOfEntrySelected">
+                    <option value="">Office of Entry</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 pad-level-xs-2">
+    <div class="btn-group input-buffer" role="group" aria-label="currencies">
+        <button type="button" class="btn btn__none btn__radio" uib-btn-radio="0" ng-model="$ctrl.fm.currencyId">&pound;</button>
+        <button type="button" class="btn btn__none btn__radio" uib-btn-radio="1" ng-model="$ctrl.fm.currencyId">&euro;</button>
+        <button type="button" class="btn btn__none btn__radio" uib-btn-radio="2" ng-model="$ctrl.fm.currencyId">$</button>
+    </div>
+</div>
+<div class="col-xs-12 pad-level-xs-2">
+    <div class="form-group input-buffer pad-level-xs-2">
+        <div class="col-xs-12">
+            <label class="">Auction</label>
+        </div>
+        <div class="col-xs-12">
+            <div class="select-container form-control input-buffer">
+                <select ng-class="{'unselected': $ctrl.fm.auctionHouseSelected===null}" ng-options="item as item.name for item in $ctrl.fm.auctionHouses track by item.id" ng-model="$ctrl.fm.auctionHouseSelected">
+                    <option value="">Auction House</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

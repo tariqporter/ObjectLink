@@ -1,6 +1,8 @@
-﻿import template from './search-results.html'
+﻿import ccSearchResultsItems from './search-results-items/search-results-items.js';
 
-export default angular.module('cc.search-results', [])
+import template from './search-results.html'
+
+export default angular.module('cc.search-results', [ccSearchResultsItems.name])
     .controller('SearchResultsController', SearchResultsController)
     .directive('ccSearchResults', SearchResultsDirective);
 
@@ -15,9 +17,13 @@ function SearchResultsDirective() {
     };
 }
 
-function SearchResultsController($routeParams) {
+function SearchResultsController($routeParams, Modal) {
     var self = this;
     self.um = {
         query: decodeURIComponent($routeParams.query)
+    };
+
+    self.showResultsFilter = function () {
+        Modal.openSearchForm();
     };
 }

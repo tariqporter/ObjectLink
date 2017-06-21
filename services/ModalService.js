@@ -1,43 +1,17 @@
-﻿
-export default angular.module('ModalService', [])
+﻿import ccModalSearchForm from '.././components/modal/modal-search-form/modal-search-form.js';
+
+export default angular.module('ModalService', [ccModalSearchForm.name])
     .service('Modal', ModalService);
 
 function ModalService($uibModal) {
     var self = this;
 
-    self.openPickLists = function () {
+    self.openSearchForm = function () {
         var modal = {
             animation: true,
-            component: 'ccModalPickLists',
-            windowClass: 'modal-pick-lists',
+            component: 'ccModalSearchForm',
+            windowClass: 'modal-search-form',
             size: 'lg'
-        };
-        var modalInstance = $uibModal.open(modal);
-        return modalInstance;
-    };
-
-    self.openCompareItems = function () {
-        var modal = {
-            animation: true,
-            component: 'ccModalCompareItems',
-            windowClass: 'modal-compare-items',
-            size: 'lg'
-        };
-        var modalInstance = $uibModal.open(modal);
-        return modalInstance;
-    };
-
-    self.openZoomImage = function (image) {
-        var modal = {
-            animation: true,
-            component: 'ccModalZoomImage',
-            windowClass: 'modal-zoom-image',
-            size: 'fs',
-            resolve: {
-                fm: {
-                    image: image
-                }
-            }
         };
         var modalInstance = $uibModal.open(modal);
         return modalInstance;

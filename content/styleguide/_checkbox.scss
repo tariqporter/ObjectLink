@@ -14,6 +14,7 @@
 }
 
 input[type="radio"] {
+    //Bootstrap class active
     &.active {
         + .checkbox {
             &::before {
@@ -88,8 +89,7 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-.checkbox--label {
-    margin-right: 10px;
+.checkbox-label {
     font-weight: 400;
     padding-left: 30px;
     position: relative;

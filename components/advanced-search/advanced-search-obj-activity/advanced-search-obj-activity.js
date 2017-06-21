@@ -9,7 +9,7 @@ function AdvancedSearchObjActivityDirective() {
 		restrict: 'E',
 		scope: {},
 		bindToController: {
-
+            fm: '='
 		},
 		controllerAs: '$ctrl',
 		template: template,
@@ -18,5 +18,13 @@ function AdvancedSearchObjActivityDirective() {
 }
 
 function AdvancedSearchObjActivityController() {
-	var self = this;
+    var self = this;
+
+    self.$onInit = function () {
+        console.log(self.fm)
+    };
+
+    self.test = function () {
+        console.log(self.fm);
+    };
 }

@@ -1,8 +1,13 @@
-﻿.image--container {
+﻿.image-container {
     height: auto;
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    &.light-stripe {
+        /*background-color:#f7f7f7;*/
+        background: repeating-linear-gradient(135deg, #f7f7f7, #f7f7f7 10px, #fafafa 10px, #fafafa 20px);
+    }
 
     img {
         position: absolute;

@@ -1,14 +1,14 @@
 <div class="col-xs-12 col-md-8">
     <div class="col-xs-6">
-        <input type="text" class="form-control input--buffer" placeholder="Artist" />
+        <input type="text" class="form-control input-buffer" placeholder="Artist" />
     </div>
     <div class="col-xs-6">
-        <input type="text" class="form-control input--buffer" placeholder="CAMS item #/COS Object" />
+        <input type="text" class="form-control input-buffer" placeholder="CAMS item #/COS Object" />
     </div>
     <div class="col-xs-12">
-        <div class="form--group input--buffer">
+        <div class="form-group input-buffer">
             <div class="col-xs-12">
-                <label class="form--group-label">Execution dates</label>
+                <label class="form-group-label">Execution dates</label>
             </div>
             <div class="col-xs-6">
                 <div class="input-group">
@@ -33,26 +33,26 @@
         </div>
     </div>
 </div>
-<div class="col-xs-12 col-md-4 pad--level-xs-2">
-    <div class="form--group input--buffer">
+<div class="col-xs-12 col-md-4 pad-level-xs-2">
+    <div class="form-group input-buffer">
         <div class="col-xs-12">
-            <label class="form--group-label">Value</label>
+            <label class="form-group-label">Value</label>
             <div class="btn-group" role="group" aria-label="currencies">
-                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="0" ng-model="$ctrl.fm.currencyId">&pound;</button>
-                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="1" ng-model="$ctrl.fm.currencyId">&euro;</button>
-                <button type="button" class="btn btn--none btn--radio" uib-btn-radio="2" ng-model="$ctrl.fm.currencyId">$</button>
+                <button type="button" class="btn btn__none btn__radio" uib-btn-radio="0" ng-model="$ctrl.fm.currencyId">&pound;</button>
+                <button type="button" class="btn btn__none btn__radio" uib-btn-radio="1" ng-model="$ctrl.fm.currencyId">&euro;</button>
+                <button type="button" class="btn btn__none btn__radio" uib-btn-radio="2" ng-model="$ctrl.fm.currencyId">$</button>
             </div>
         </div>
         <div class="col-xs-6">
-            <label class="form--group-label"><small>Minimum</small></label>
-            <input type="text" class="form-control input--buffer" placeholder="From" />
+            <label class="form-group-label"><small>Minimum</small></label>
+            <input type="text" class="form-control input-buffer" placeholder="From" />
         </div>
         <div class="col-xs-6">
-            <label class="form--group-label"><small>Maximum</small></label>
-            <input type="text" class="form-control input--buffer" placeholder="To" />
+            <label class="form-group-label"><small>Maximum</small></label>
+            <input type="text" class="form-control input-buffer" placeholder="To" />
         </div>
         <div class="col-xs-6">
-            <div class="input-group input--buffer">
+            <div class="input-group input-buffer">
                 <input type="text" class="form-control" placeholder="From" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.valueFromDate" is-open="$ctrl.fm.valueFromDateOpen" />
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" ng-click="$ctrl.fm.valueFromDateOpen = true">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-xs-6">
-            <div class="input-group input--buffer">
+            <div class="input-group input-buffer">
                 <input type="text" class="form-control" placeholder="To" uib-datepicker-popup="dd-MMM-yyyy" show-button-bar="false" ng-model="$ctrl.fm.valueToDate" is-open="$ctrl.fm.valueToDateOpen" />
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" ng-click="$ctrl.fm.valueToDateOpen = true">
@@ -73,21 +73,21 @@
         </div>
     </div>
 </div>
-<div class="col-xs-12 pad--level-xs-2">
-    <uib-accordion class="accordion--group input--buffer">
+<div class="col-xs-12 pad-level-xs-2">
+    <uib-accordion class="accordion-group input-buffer">
         <div uib-accordion-group is-open="$ctrl.um.clustersOpen" class="panel-default">
             <uib-accordion-heading>
                 <label class="" role="button">Select Cluster</label>
-                <button class="btn btn--none pull-right">
+                <button class="btn btn__none pull-right">
                     <i class="fa" ng-class="{'fa-chevron-down':!$ctrl.um.clustersOpen, 'fa-chevron-up': $ctrl.um.clustersOpen}" aria-hidden="true"></i>
                 </button>
             </uib-accordion-heading>
             <div class="panel-body-inner">
-                <ul class="list-inline checkbox--group">
+                <ul class="list-inline checkbox__group">
                     <li class="col-xs-6 col-sm-4" ng-repeat="cluser in $ctrl.fm.clusters">
-                        <label class="checkbox--label accordion--item">
+                        <label class="checkbox-label accordion-group__item">
                             <input type="checkbox" ng-model="cluser.selected" />
-                            <span class="checkbox" ng-bind="cluser.clusterName"></span>
+                            <span class="checkbox" ng-bind="cluser.name"></span>
                         </label>
                     </li>
                 </ul>
@@ -95,21 +95,21 @@
         </div>
     </uib-accordion>
 </div>
-<div class="col-xs-12 pad--level-xs-2">
-    <uib-accordion class="accordion--group input--buffer">
+<div class="col-xs-12 pad-level-xs-2">
+    <uib-accordion class="accordion-group input-buffer">
         <div uib-accordion-group is-open="$ctrl.um.departmentsOpen" class="panel-default">
             <uib-accordion-heading>
                 <label class="" role="button">Select Department</label>
-                <button class="btn btn--none pull-right">
+                <button class="btn btn__none pull-right">
                     <i class="fa" ng-class="{'fa-chevron-down':!$ctrl.um.departmentsOpen, 'fa-chevron-up': $ctrl.um.departmentsOpen}" aria-hidden="true"></i>
                 </button>
             </uib-accordion-heading>
             <div class="panel-body-inner">
-                <ul class="list-inline checkbox--group">
+                <ul class="list-inline">
                     <li class="col-xs-6 col-sm-4" ng-repeat="department in $ctrl.fm.departments">
-                        <label class="checkbox--label accordion--item">
+                        <label class="checkbox-label accordion-group__item">
                             <input type="checkbox" ng-model="department.selected" />
-                            <span class="checkbox" ng-bind="department.departmentName"></span>
+                            <span class="checkbox" ng-bind="department.name"></span>
                         </label>
                     </li>
                 </ul>

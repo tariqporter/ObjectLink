@@ -1,0 +1,23 @@
+.search-results-item {
+    background-color: #fff;
+
+    &__details {
+        padding: 10px;
+    }
+
+    &__banner {
+        padding-top: 5px;
+        position: absolute;
+        z-index: 1;
+        /*5px from bootstrap _type.scss*/
+        left: 5px;
+        right: 5px;
+        padding-left: 30px;
+        font-weight: bold;
+        color: #fff;
+
+        &.confidential {
+            background-color: rgba(186, 37, 28, 0.5);
+        }
+    }
+}

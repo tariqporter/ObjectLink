@@ -1,28 +1,28 @@
-﻿.top--buffer {
+﻿.top-buffer {
     margin-top: $grid-gutter-width;
 }
 
-.bottom--buffer {
+.bottom-buffer {
     margin-bottom: $grid-gutter-width;
 }
 
-.input--buffer {
+.input-buffer {
     margin-top: floor(($grid-gutter-width / 2));
 }
 
-.full--width {
-    .col-full--width {
+.full-width {
+    .col-full-width {
         padding:0;
     }
 }
 
-.pad--level-xs-1 {
+.pad-level-xs-1 {
     padding-left: floor(($grid-gutter-width / 2)) !important;
     padding-right: floor(($grid-gutter-width / 2)) !important;
 }
 
 
-.pad--level-xs-2 {
+.pad-level-xs-2 {
     padding-left: $grid-gutter-width !important;
     padding-right: $grid-gutter-width !important;
 }
