@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="$ctrl.cancel()"><span>&times;</span></button>
+    <h4 class="modal-title">Select Columns</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="">
+            <button type="button" ng-repeat="(key, value) in $ctrl.searchResultsModel.columns" class="btn" ng-class="{'btn__primary': value.active, 'btn__secondary': !value.active}" ng-bind="key" ng-click="value.active = !value.active"></button>
+        </div>
+    </div>
+</div>

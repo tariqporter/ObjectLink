@@ -9,7 +9,9 @@ function ModalSearchFormDirective() {
 		restrict: 'E',
 		scope: {},
 		bindToController: {
-
+            resolve: '<',
+            close: '&',
+            dismiss: '&'
 		},
 		controllerAs: '$ctrl',
 		template: template,
@@ -18,5 +20,14 @@ function ModalSearchFormDirective() {
 }
 
 function ModalSearchFormController() {
-	var self = this;
+    var self = this;
+
+    self.$onInit = function () {
+        var fm = self.resolve.fm;
+        self.fm = fm.fm;
+    };
+
+    self.cancel = function () {
+        self.dismiss({ $value: 'cancel' });
+    };
 }

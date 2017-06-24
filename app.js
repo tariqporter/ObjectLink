@@ -59,7 +59,8 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap',
         .when("/home/index", {
             redirectTo: '/'
         })
-        .when("/results/:query?", {
+        //query=page=pageSize=viewType=g|l
+        .when("/results/:q?/:p?/:ps?/:vt?", {
             template: "<cc-search-results></cc-search-results>"
         })
         .when("/itemdetail/:id", {

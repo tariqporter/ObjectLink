@@ -1,0 +1,17 @@
+@media (min-width: $screen-sm-min) {
+    .pull-right-sm {
+        float:right;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .pull-right-md {
+        float: right;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .pull-right-lg {
+        float: right;
+    }
+}

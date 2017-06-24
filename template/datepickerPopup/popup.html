@@ -2,9 +2,9 @@
     <li ng-transclude></li>
     <li ng-if="showButtonBar" class="uib-button-bar">
         <span class="btn-group pull-left">
-            <button type="button" class="btn btn--primary" ng-click="select('today', $event)" ng-disabled="isDisabled('today')">{{ getText('current') }}</button>
-            <button type="button" class="btn btn--primary" ng-click="select(null, $event)">{{ getText('clear') }}</button>
+            <button type="button" class="btn btn__primary" ng-click="select('today', $event)" ng-disabled="isDisabled('today')">{{ getText('current') }}</button>
+            <button type="button" class="btn btn__primary" ng-click="select(null, $event)">{{ getText('clear') }}</button>
         </span>
-        <button type="button" class="btn btn--primary pull-right" ng-click="close($event)">{{ getText('close') }}</button>
+        <button type="button" class="btn btn__primary pull-right" ng-click="close($event)">{{ getText('close') }}</button>
     </li>
 </ul>

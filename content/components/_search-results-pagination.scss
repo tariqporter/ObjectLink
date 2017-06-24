@@ -1,0 +1,42 @@
+.search-results-pagination {
+    color:#333333;
+    font-family:$cc-font-family-medium;
+
+    &__info {
+        text-align: center;
+    }
+
+    &__buttons {
+        text-align: center;
+    }
+
+    &__page-info {
+        span {
+
+        }
+    }
+
+    &__arrow {
+        color: #000;
+        font-size: 18px;
+        font-weight:600;
+        padding: 0;
+
+        i {
+            font-weight:inherit;
+        }
+    }
+
+    //pagination buttons have consistent width regardless of length of number
+    &__button {
+        width: 34px;
+        padding-left:3px;
+        padding-right:3px;
+    }
+
+    &__results-info {
+        background-color: #ccc;
+        font-size: 11px;
+        padding:5px;
+    }
+}

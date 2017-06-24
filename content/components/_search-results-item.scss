@@ -1,5 +1,19 @@
+/*.search-results-items {
+    padding-left:
+}*/
+
+.search-results-items {
+    overflow: hidden;
+
+    &__listview {
+        background-color: #fff;
+        transform: translate3d(0, 0, 0);
+        float: left;
+    }
+}
+
 .search-results-item {
-    background-color: #fff;
+
 
     &__details {
         padding: 10px;
@@ -19,5 +33,25 @@
         &.confidential {
             background-color: rgba(186, 37, 28, 0.5);
         }
+    }
+
+    &__row {
+        /*overflow:hidden;*/
+        white-space: nowrap;
+        height: 160px;
+
+        &::after {
+            content: ' ';
+            display:block;
+        }
+    }
+
+    &__cell {
+        width: 160px;
+        overflow: hidden;
+        /*background-color: red;*/
+        display: inline-block;
+        height: 100%;
+        background-color: #fff;
     }
 }

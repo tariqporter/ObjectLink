@@ -25,6 +25,11 @@
     }
 }
 
+.btn__secondary {
+    @extend .btn__primary;
+    background-color:#b30900;
+}
+
 /*Very specific so as to override bootstrap*/
 .btn.btn__radio {
     background-color: #fff;

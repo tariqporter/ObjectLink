@@ -1,10 +1,10 @@
 <div uib-accordion-group is-open="$ctrl.um.open" class="panel-default">
-    <uib-accordion-heading>
-        <button class="btn btn__none section-header-btn">
+    <uib-accordion-heading class="accordion-group__header">
+        <button class="btn btn__none accordion-group__header__btn">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <label class="" role="button" ng-bind="$ctrl.title"></label>
-        <button class="btn btn__none pull-right section-header-btn">
+        <button class="btn btn__none pull-right accordion-group__header__btn">
             <i class="fa" ng-class="{'fa-chevron-down':!$ctrl.um.departmentsOpen, 'fa-chevron-up': $ctrl.um.departmentsOpen}" aria-hidden="true"></i>
         </button>
     </uib-accordion-heading>

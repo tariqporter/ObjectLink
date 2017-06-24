@@ -1,23 +1,55 @@
-<ul class="list-inline">
-    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 bottom-buffer" ng-repeat="item in $ctrl.items">
-        <div class="search-results-item">
-            <div class="search-results-item__banner" ng-class="{'confidential': item.confidential}">
-                <span ng-if="item.confidential">CONFIDENTIAL</span>
-                <label class="checkbox-label pull-right">
+<div class="search-results-items pad-level-xs-1">
+    <div class="" ng-show="$ctrl.isGridView">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 bottom-buffer" ng-repeat="item in $ctrl.searchResultsModel.searchResults">
+            <div class="search-results-item">
+                <div class="search-results-item__banner" ng-class="{'confidential': item.confidential}">
+                    <span ng-if="item.confidential">CONFIDENTIAL</span>
+                    <label class="checkbox-label pull-right">
+                        <input type="checkbox" ng-model="item.selected" />
+                        <span class="checkbox"></span>
+                    </label>
+                </div>
+                <div class="image-container light-stripe">
+                    <img ng-src="{{item.mainImageUrl}}" alt="" />
+                </div>
+                <div class="search-results-item__details">
+                    <h5 class="" ng-bind="item.title"></h5>
+                    <p><em>Current Owner: </em><span ng-bind="item.currentOwner"></span></p>
+                    <p><em>Value: </em><span ng-bind="item.valueCurrency + item.value"></span></p>
+                    <p><em>Medium: </em><span ng-bind="item.medium"></span></p>
+                    <p><em>Edition: </em><span ng-bind="item.edition"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-results-items__listview" ng-show="!$ctrl.isGridView">
+        <div class="search-results-item__row">
+            <div class="search-results-item__cell"><div></div></div>
+            <div class="search-results-item__cell"><div>Image</div></div>
+            <div class="search-results-item__cell"><div>Title</div></div>
+            <div class="search-results-item__cell" ng-repeat="(key, value) in $ctrl.searchResultsModel.columns" ng-if="value.active">
+                <div ng-bind="key"></div>
+            </div>
+        </div>
+        <div class="search-results-item__row" style="" ng-repeat="item in $ctrl.searchResultsModel.searchResults">
+            <div class="search-results-item__cell">
+                <label class="checkbox-label">
                     <input type="checkbox" ng-model="item.selected" />
                     <span class="checkbox"></span>
                 </label>
+                <button type="button" class="btn btn__primary" ng-click="$ctrl.addToPickList(item)">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
             </div>
-            <div class="image-container light-stripe">
-                <img ng-src="{{item.mainImageUrl}}" alt="" />
+            <div class="search-results-item__cell">
+                <div class="image-container light-stripe">
+                    <img ng-src="{{item.mainImageUrl}}" alt="" />
+                </div>
             </div>
-            <div class="search-results-item__details">
-                <h5 class="" ng-bind="item.title"></h5>
-                <p><em>Current Owner: </em><span ng-bind="item.currentOwner"></span></p>
-                <p><em>Value: </em><span ng-bind="item.valueCurrency + item.value"></span></p>
-                <p><em>Medium: </em><span ng-bind="item.medium"></span></p>
-                <p><em>Edition: </em><span ng-bind="item.edition"></span></p>
+            <div class="search-results-item__cell"><h5 class="" ng-bind="item.title"></h5></div>
+            <div class="search-results-item__cell" ng-repeat="(key, value) in $ctrl.searchResultsModel.columns" ng-if="value.active">
+                <p ng-bind="$ctrl.getBoundValue(item, value)"></p>
             </div>
         </div>
-    </li>
-</ul>
+    </div>
+</div>

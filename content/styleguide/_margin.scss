@@ -26,3 +26,20 @@
     padding-left: $grid-gutter-width !important;
     padding-right: $grid-gutter-width !important;
 }
+
+.pad-level-xs-left-1 {
+    padding-left: floor(($grid-gutter-width / 2)) !important;
+}
+
+.pad-level-xs-right-1 {
+    padding-right: floor(($grid-gutter-width / 2)) !important;
+}
+
+
+.pad-level-xs-left-2 {
+    padding-left: $grid-gutter-width !important;
+}
+
+.pad-level-xs-right-2 {
+    padding-right: $grid-gutter-width !important;
+}

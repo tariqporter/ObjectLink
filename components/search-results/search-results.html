@@ -15,7 +15,35 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <cc-search-results-items></cc-search-results-items>
+            <div class="search-results">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <cc-search-keyword fm="$ctrl.fm"></cc-search-keyword>
+                    </div>
+                </div>
+                <div class="search-results">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <cc-search-results-bar search-results-model="$ctrl.um.searchResultsModel" is-grid-view="$ctrl.um.isGridView"></cc-search-results-bar>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <!--<div class="col-xs-12 col-sm-3">
+                            <button type="button" class="btn btn__secondary" ng-click="$ctrl.openSearchForm()">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                            </button>
+                        </div>-->
+                        <div class="col-xs-12">
+                            <cc-search-results-pagination search-results-model="$ctrl.um.searchResultsModel" search-fn="$ctrl.searchFn(input, page, pageSize)"></cc-search-results-pagination>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-xs-12">
+                            <cc-search-results-items search-results-model="$ctrl.um.searchResultsModel" is-grid-view="$ctrl.um.isGridView"></cc-search-results-items>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

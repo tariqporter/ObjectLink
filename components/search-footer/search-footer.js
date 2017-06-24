@@ -17,10 +17,11 @@ function SearchFooterDirective() {
     };
 }
 
-function SearchFooterController($location) {
+function SearchFooterController($location, Search) {
     var self = this;
 	
-    self.search = function() {
-        $location.path('results').search('query',  Object.keys(self.fm).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.fm[k])}`).join('&'));
+    self.search = function () {
+        $location.path('results');
+        //.search('query', Object.keys(self.fm).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.fm[k])}`).join('&'));
     };
 }

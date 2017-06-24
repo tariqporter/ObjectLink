@@ -1,0 +1,33 @@
+<div class="search-results-pagination">
+    <p class="search-results-pagination__info">
+    <span class="search-results-pagination__page-info">Page <span ng-bind="$ctrl.searchResultsModel.page"></span> of <span ng-bind="$ctrl.searchResultsModel.totalPagesLength"></span> Pages </span>
+    <span class="search-results-pagination__results-info"><span ng-bind="$ctrl.searchResultsModel.totalResultsLength"></span> Results</span>
+    </p>
+    <ul class="list-inline search-results-pagination__buttons">
+        <li>
+            <button type="button" class="btn btn__none search-results-pagination__arrow" ng-click="$ctrl.paginate(1)">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="btn btn__none search-results-pagination__arrow" ng-click="$ctrl.paginate($ctrl.searchResultsModel.page <= 1 ? 1 : $ctrl.searchResultsModel.page - 1)">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+        </li>
+
+        <li ng-repeat="page in $ctrl.searchResultsModel.pages">
+            <button type="button" class="btn search-results-pagination__button" ng-class="{'btn__primary':page !== $ctrl.searchResultsModel.page, 'btn__secondary': page === $ctrl.searchResultsModel.page}" ng-bind="page" ng-click="$ctrl.paginate(page)"></button>
+        </li>
+
+        <li>
+            <button type="button" class="btn btn__none search-results-pagination__arrow" ng-click="$ctrl.paginate($ctrl.searchResultsModel.page >= $ctrl.searchResultsModel.totalPagesLength ? $ctrl.searchResultsModel.totalPagesLength : $ctrl.searchResultsModel.page + 1)">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="btn btn__none search-results-pagination__arrow" ng-click="$ctrl.paginate($ctrl.searchResultsModel.totalPagesLength)">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </button>
+        </li>
+    </ul>
+</div>
