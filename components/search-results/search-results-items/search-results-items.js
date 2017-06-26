@@ -59,16 +59,26 @@ function SearchResultsItemsDirective($document) {
 
             var start = null;
             $el.addEventListener("touchstart", function (e) {
+                //e.preventDefault();
                 var touch = e.touches[0];
                 var startTransform = getTransform($el);
-                start = { x: touch.clientX - startTransform.x, y: touch.clientY - startTransform.y };
+                start = { x: touch.clientX - startTransform.x, y: touch.clientY - startTransform.y, dy: window.pageYOffset || document.documentElement.scrollTop };
                 var transform = 'translate(' + startTransform.x + 'px, ' + startTransform.y + 'px)';
                 $el.style.transform = transform;
             });
 
             $el.addEventListener("touchmove", function (e) {
+                e.preventDefault();
                 var touch = e.touches[0];
                 var transformX = touch.clientX - start.x;
+                var transformY = touch.clientY - start.y;
+
+                //var top = window.pageYOffset || document.documentElement.scrollTop;
+                //console.log([top, transformY]);
+                //window.pageYOffset = document.documentElement.scrollTop = start.dy + transformY;
+                window.scrollTo(0, start.dy - transformY);
+                //console.log(start.dy - transformY);
+
                 var $parent = $el.parentNode;
                 transformX = (transformX > 0) ? 0 : (transformX < $parent.clientWidth - $el.clientWidth) ? $parent.clientWidth - $el.clientWidth : transformX;
                 var transform = 'translate('

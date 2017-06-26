@@ -87,8 +87,11 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
     };
 
     self.search = function (input, page, pageSize) {
-        page = (page === null) ? 1 : page;
-        pageSize = (pageSize === null) ? 12 : pageSize;
+        var defaults = { page: 1, pageSize: 12 };
+        var mapping = { page: 'p', pageSize: 'ps' };
+        page = (page === null) ? defaults.page : page;
+        pageSize = (pageSize === null) ? defaults.pageSize : pageSize;
+
         var columns = {
             //'Image': 'mainImageUrl',
             //'Title': { title: 'title', active: true },
@@ -325,7 +328,13 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
             j++;
         }
 
-        $location.search('p', searchResultsModel.page).search('ps', searchResultsModel.pageSize);
+        for (var key in defaults) {
+            if (defaults[key] !== searchResultsModel[key]) {
+                $location.search(mapping[key], searchResultsModel[key]);
+            }
+        }
+
+        //$location.search('p', searchResultsModel.page).search('ps', searchResultsModel.pageSize);
 
         var deferred = $q.defer();
         deferred.resolve(searchResultsModel);
