@@ -21,7 +21,8 @@ function SearchFooterController($location, Search) {
     var self = this;
 	
     self.search = function () {
-        $location.path('results');
-        //.search('query', Object.keys(self.fm).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.fm[k])}`).join('&'));
+        var diff = Search.getDifference(self.fm);
+        $location.path('results').search('q', Object.keys(diff).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(diff[k])}`).join('&'));
+        //$location.path('results').search('q', Object.keys(self.fm).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(self.fm[k])}`).join('&'));
     };
 }

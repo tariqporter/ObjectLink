@@ -1,12 +1,74 @@
-﻿var _ = require('lodash');
-
-export default angular.module('SearchService', [])
+﻿export default angular.module('SearchService', [])
     .service('Search', SearchService);
 
 function SearchService($http, $timeout, $q, $location, apiPath) {
     var self = this;
     self.fm = {
         defaultModel: null
+    };
+
+    self.getDifference = function (fm) {
+        var diff = {};
+        for (var k in fm) {
+            if (angular.isArray(fm[k])) {
+                var arr = [];
+                for (var i = 0; i < fm[k].length; ++i) {
+                    if (fm[k][i].selected) {
+                        arr.push(fm[k][i].id);
+                    }
+                }
+                if (arr.length) {
+                    diff[k] = arr;
+                }
+            } else if (angular.isObject(fm[k])) {
+                if (k.substr(k.length - "Selected".length) === "Selected" && typeof fm[k].id !== 'undefined') {
+                    diff[k] = fm[k].id;
+                }
+            } else if (fm[k] !== self.fm.defaultModel[k]) {
+                diff[k] = fm[k];
+            }
+        }
+        return diff;
+    };
+
+    self.buildFormModel = function (fmStr) {
+        var deferred = $q.defer();
+        self.getFormModel().then(function (x) {
+            var fm = JSON.parse('{"' + decodeURI(fmStr).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            var merge = angular.merge({}, self.fm.defaultModel);
+            for (var k in fm) {
+                if (angular.isArray(merge[k])) {
+                    var split = fm[k].split(',').map(x => parseInt(x, 10));
+                    for (var i = 0; i < merge[k].length; ++i) {
+                        for (var j = 0; j < split.length; ++j) {
+                            if (merge[k][i].id === split[j]) {
+                                merge[k][i].selected = true;
+                            }
+                        }
+                    }
+                } else if (angular.isDefined(merge[k])) {
+                    var k2 = k.substr(0, k.length - "Selected".length);
+                    var k2End = k.substr(k.length - "Selected".length);
+                    if (k2End === "Selected" && angular.isDefined(merge[k2])) {
+                        for (var i = 0; i < merge[k2].length; ++i) {
+                            if (merge[k2][i].id === parseInt(fm[k], 10)) {
+                                merge[k] = merge[k2][i];
+                            }
+                        }
+                    } else {
+                        var kv = fm[k].toLowerCase();
+                        var v = (kv === 'true') ? true : (kv === 'false') ? false : !isNaN(parseInt(kv, 10)) ? parseInt(kv, 10) : kv;
+                        merge[k] = v;
+                    }
+                } else {
+                    var kv = fm[k].toLowerCase();
+                    var v = (kv === 'true') ? true : (kv === 'false') ? false : !isNaN(parseInt(kv, 10)) ? parseInt(kv, 10) : kv;
+                    merge[k] = v;
+                }
+            }
+            deferred.resolve(merge);
+        });
+        return deferred.promise;
     };
 
     self.getFormModel = function () {
@@ -54,7 +116,7 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
                 { id: 5, name: 'Works on Paper' },
                 { id: 6, name: 'Photograph' }
             ],
-            valuationTypes: [
+            valuationType: [
                 { id: 0, name: 'Valuation Type 1' },
                 { id: 1, name: 'Valuation Type 2' }
             ],
@@ -64,9 +126,9 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
                 { id: 0, name: 'Office of Entry 2' }
             ],
             officeOfEntrySelected: null,
-            auctionHouses: [
-                { id: 0, name: 'Sotheby\'s' },
-                { id: 1, name: 'Christie\'s' },
+            auctionHouse: [
+                { id: 0, name: "Sotheby's" },
+                { id: 1, name: "Christie's" },
             ],
             auctionHouseSelected: null,
         });
@@ -86,7 +148,7 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
         return promise;
     };
 
-    self.search = function (input, page, pageSize) {
+    self.search = function (model, page, pageSize) {
         var defaults = { page: 1, pageSize: 12 };
         var mapping = { page: 'p', pageSize: 'ps' };
         page = (page === null) ? defaults.page : page;
@@ -329,12 +391,8 @@ function SearchService($http, $timeout, $q, $location, apiPath) {
         }
 
         for (var key in defaults) {
-            if (defaults[key] !== searchResultsModel[key]) {
-                $location.search(mapping[key], searchResultsModel[key]);
-            }
+            $location.search(mapping[key], (defaults[key] === searchResultsModel[key]) ? null : searchResultsModel[key]);
         }
-
-        //$location.search('p', searchResultsModel.page).search('ps', searchResultsModel.pageSize);
 
         var deferred = $q.defer();
         deferred.resolve(searchResultsModel);

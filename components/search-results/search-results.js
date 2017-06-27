@@ -23,6 +23,7 @@ function SearchResultsController($routeParams, Modal, Search) {
     var self = this;
     self.um = {
         isGridView: !(angular.isDefined($routeParams.vt) && $routeParams.vt.toLowerCase() === 'l'), //Default to grid-view
+        queryStr: angular.isDefined($routeParams.q) ? decodeURIComponent($routeParams.q) : null,
         searchResultsModel: {
             page: angular.isDefined($routeParams.p) ? parseInt($routeParams.p, 10) : null,
             pageSize: angular.isDefined($routeParams.ps) ? parseInt($routeParams.ps, 10) : null,
@@ -34,13 +35,21 @@ function SearchResultsController($routeParams, Modal, Search) {
         }
     };
 
+    //console.log(self.um.queryStr);
+    //console.log(decodeURIComponent(self.um.queryStr));
+    //self.queryModel = {};
+    Search.buildFormModel(self.um.queryStr).then(function (merge) {
+        //console.log(merge);
+        self.fm = merge;
+    });
+    
     self.showResultsFilter = function () {
         Modal.openSearchForm();
     };
 
-    Search.getFormModel().then(function (fm) {
-        self.fm = fm;
-    });
+    //Search.getFormModel().then(function (fm) {
+    //    self.fm = fm;
+    //});
 
     self.searchFn = function (input, page, pageSize) {
         Search.search(input, page, pageSize).then(function (searchResultsModel) {

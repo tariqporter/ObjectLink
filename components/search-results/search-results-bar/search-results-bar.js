@@ -10,7 +10,8 @@ function SearchResultsBarDirective() {
 		scope: {},
 		bindToController: {
             searchResultsModel: '=',
-            isGridView: '='
+            isGridView: '=',
+            fm: '='
 		},
 		controllerAs: '$ctrl',
 		template: template,
@@ -49,9 +50,10 @@ function SearchResultsBarController($location, Modal, Search) {
     };
 
     self.openSearchForm = function () {
-        Search.getFormModel().then(function (fm) {
-            var modalInstance = Modal.openSearchForm(fm);
-        });
+        var modalInstance = Modal.openSearchForm(self.fm);
+        //Search.getFormModel().then(function (fm) {
+        //    var modalInstance = Modal.openSearchForm(fm);
+        //});
     };
 
     self.openCompareItems = function () {
